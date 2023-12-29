@@ -1,2 +1,2 @@
-#! /bin/bash 
-cp -wn *.html ../
+#! /bin/bash
+cp -u *.html ..
