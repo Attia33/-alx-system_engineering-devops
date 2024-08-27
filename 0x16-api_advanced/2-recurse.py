@@ -8,9 +8,12 @@ def recurse(subreddit, hot_list=[], after=""):
     headers = {'User-Agent': 'my-custom-user-agent'}
     params = {'after': after}
 
-
     try:
-        response = requests.get(url, headers=headers, params=params, allow_redirects=False)
+        response = requests.get(
+    url,
+    headers=headers,
+    params=params,
+     allow_redirects=False)
         if response.status_code == 200:
             data = response.json()
             posts = data['data']['children']
